@@ -1,7 +1,7 @@
 import React from 'react';
 import WeatherForecast from './WeatherForecast'; // import the WeatherForecast component
 import './WeatherForecast.css'; // import the CSS file
-import ThemeToggle from './ThemeToggle';
+import ThemeToggle from './ThemeToggle'; // Import the ThemeToggle component
 
 const weatherForecasts = [
   {
@@ -43,7 +43,7 @@ const weatherForecasts = [
 
 const App = () => {
   return (
-    <>
+    <ThemeToggle> {/* Wrap the app content inside ThemeToggle for dark mode */}
       <h1>Local Weather</h1>
       <section>
         {weatherForecasts.map((forecast, index) => (
@@ -57,7 +57,7 @@ const App = () => {
           />
         ))}
       </section>
-    </>
+    </ThemeToggle>
   );
 };
 
